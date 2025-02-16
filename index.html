@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header in cima, sfondo nero -->
+  <!-- Header: occupa tutta la larghezza, sfondo nero -->
   <header class="page-header">
     <div class="header-content">
       <h1>Attilio Comes</h1>
@@ -16,17 +16,9 @@
     </div>
   </header>
 
-  <!-- Campo descrizione posto subito sotto l'header -->
-  <section class="description">
-    <p>
-      Con una passione per le telecomunicazioni e sempre desideroso di crescere, ho maturato esperienza in interventi software e hardware per dispositivi mobili.
-      La mia conoscenza dei protocolli TCP/IP e dell'architettura di rete mi consente di affrontare con competenza le sfide nel vasto campo dell'IT.
-    </p>
-  </section>
-
-  <!-- Layout a due colonne: il sidebar (contatti, competenze e certificazioni) inizia sotto l'header e la descrizione -->
+  <!-- Layout a due colonne: Sidebar e Main Content -->
   <div class="wrapper">
-    <!-- Sidebar a sinistra -->
+    <!-- Sidebar: inizia subito sotto l'header -->
     <aside class="sidebar">
       <div class="sidebar-inner">
         <section class="contact">
@@ -61,8 +53,15 @@
       </div>
     </aside>
 
-    <!-- Contenuto principale a destra -->
+    <!-- Main Content: il campo descrizione (riassunto) parte in alto -->
     <main class="main-content">
+      <section class="summary">
+        <p>
+          Con una passione per le telecomunicazioni e sempre desideroso di crescere, ho maturato esperienza in interventi software e hardware per dispositivi mobili.
+          La mia conoscenza dei protocolli TCP/IP e dell'architettura di rete mi consente di affrontare con competenza le sfide nel vasto campo dell'IT.
+        </p>
+      </section>
+
       <section class="experience">
         <h2>Esperienza</h2>
         <div class="experience-item">
@@ -96,6 +95,7 @@
           <p>Gestione e riparazione dei dispositivi di radiocomunicazione per l’esercito Italiano (regione NordEst).</p>
         </div>
       </section>
+      
       <section class="education">
         <h2>Formazione</h2>
         <p>
