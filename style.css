@@ -10,11 +10,12 @@ body, html {
   height: 100%;
 }
 
-/* Header: occupa tutta la larghezza, sfondo nero */
+/* Header: occupa tutta la larghezza, sfondo nero, con padding superiore ed inferiore aumentato di 1cm ciascuno (circa 2cm in totale) */
 .page-header {
   background-color: #000;
   color: #fff;
-  padding: 20px;
+  /* Padding top e bottom originalmente 20px, ora aumentati di 1cm (circa 37.8px) */
+  padding: calc(20px + 1cm) 20px;
   text-align: center;
 }
 
@@ -33,20 +34,35 @@ body, html {
   font-size: 1em;
 }
 
-/* Wrapper: contiene sidebar e main-content; parte subito sotto l'header */
-.wrapper {
-  display: flex;
-  align-items: stretch;
-  min-height: calc(100vh - 80px); /* 80px = altezza header (modifica se necessario) */
+/* Campo Descrizione: posto subito sotto l'header */
+.description {
+  background-color: #f9f9f9;
+  padding: 20px 40px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
 }
 
-/* Sidebar: inizia subito sotto l'header, sfondo nero, occupa tutta l'altezza residua */
+.description p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* Wrapper per il layout a due colonne */
+.wrapper {
+  display: flex;
+  align-items: stretch; /* Le colonne si allineano in alto */
+  min-height: calc(100vh - calc(20px + 1cm)*2 - 20px - 40px); /* Altezza viewport meno l'header aumentato e la descrizione */
+  /* Nota: il calcolo della altezza residua può essere regolato in base alle tue esigenze */
+}
+
+/* Sidebar: inizia subito sotto l'header e la descrizione, sfondo nero */
 .sidebar {
   width: 300px;
   background-color: #000;
   color: #fff;
   padding: 20px;
-  height: calc(100vh - 80px); /* l'altezza della viewport meno l'header */
+  /* Puoi utilizzare height: 100% oppure impostare un'altezza fissa se necessario */
+  height: 100%;
 }
 
 .sidebar-inner {
@@ -90,14 +106,8 @@ body, html {
   padding: 20px 40px;
 }
 
-/* Campo Descrizione (Summary) */
-.summary {
-  margin-bottom: 20px;
-}
-.summary p {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
+/* Campo Descrizione all'interno del main-content (se usato anche qui) */
+/* Se la descrizione deve essere unica e non ripetuta, tienila solo fuori dal wrapper */
 
 /* Esperienza e Formazione */
 .experience h2,
