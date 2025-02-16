@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header: occupa tutta la larghezza, sfondo nero -->
+  <!-- Header fisso in cima, sfondo nero, altezza aumentata -->
   <header class="page-header">
     <div class="header-content">
       <h1>Attilio Comes</h1>
@@ -16,94 +16,94 @@
     </div>
   </header>
 
-  <!-- Layout a due colonne: Sidebar e Main Content -->
-  <div class="wrapper">
-    <!-- Sidebar: inizia subito sotto l'header -->
-    <aside class="sidebar">
-      <div class="sidebar-inner">
-        <section class="contact">
-          <h2>Contatta</h2>
-          <ul>
-            <li>3389878635</li>
-            <li><a href="mailto:attilio.comes@gmail.com">attilio.comes@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/attilio-comes-b0248159/">LinkedIn</a></li>
-            <li><a href="https://github.com/ComesLab">GitHub</a></li>
-          </ul>
-        </section>
-        <section class="skills">
-          <h2>Competenze</h2>
-          <ul>
-            <li>Data recovery</li>
-            <li>Sviluppo in Python</li>
-            <li>Interventi hardware (SMD/PTH)</li>
-            <li>Architettura di rete TCP/IP</li>
-            <li>Conoscenza Office 365</li>
-            <li>Conoscenza Linux Essentials</li>
-          </ul>
-        </section>
-        <section class="certifications">
-          <h2>Certificazioni</h2>
-          <ul>
-            <li>Sistemista di Rete - Forma.Temp (ID 104PROTD2406677)</li>
-            <li>Cyber Security & Python - Forma.Temp (ID 104PROTD2423977, 160h)</li>
-            <li>Microsoft Active Directory - Windows Server 2019</li>
-            <li>MICROSOFT MCDBA (04/2021, Cert. 000000063976)</li>
-          </ul>
-        </section>
+  <!-- Sidebar fisso: inizia subito sotto l'header e si estende fino in fondo -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <section class="contact">
+        <h2>Contatta</h2>
+        <ul>
+          <li>3389878635</li>
+          <li><a href="mailto:attilio.comes@gmail.com">attilio.comes@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/attilio-comes-b0248159/">LinkedIn</a></li>
+          <li><a href="https://github.com/ComesLab">GitHub</a></li>
+        </ul>
+      </section>
+      <section class="skills">
+        <h2>Competenze</h2>
+        <ul>
+          <li>Data recovery</li>
+          <li>Sviluppo in Python</li>
+          <li>Interventi hardware (SMD/PTH)</li>
+          <li>Architettura di rete TCP/IP</li>
+          <li>Conoscenza Office 365</li>
+          <li>Conoscenza Linux Essentials</li>
+        </ul>
+      </section>
+      <section class="certifications">
+        <h2>Certificazioni</h2>
+        <ul>
+          <li>Sistemista di Rete - Forma.Temp (ID 104PROTD2406677)</li>
+          <li>Cyber Security & Python - Forma.Temp (ID 104PROTD2423977, 160h)</li>
+          <li>Microsoft Active Directory - Windows Server 2019</li>
+          <li>MICROSOFT MCDBA (04/2021, Cert. 000000063976)</li>
+        </ul>
+      </section>
+    </div>
+  </aside>
+
+  <!-- Main Content: inizia in alto, allineato con il bordo superiore del sidebar -->
+  <main class="main-content">
+    <!-- Campo descrizione (summary) -->
+    <section class="summary">
+      <p>
+        Con una passione per le telecomunicazioni e sempre desideroso di crescere, ho maturato esperienza in interventi software e hardware per dispositivi mobili.
+        La mia conoscenza dei protocolli TCP/IP e dell'architettura di rete mi consente di affrontare con competenza le sfide nel vasto campo dell'IT.
+      </p>
+    </section>
+
+    <!-- Esperienze -->
+    <section class="experience">
+      <h2>Esperienza</h2>
+      <div class="experience-item">
+        <h3>Sviluppatore Python</h3>
+        <p class="date">Nuove Frontiere Lavoro - 11/2024</p>
+        <p>Realizzato utility in Python per la scansione delle porte di indirizzi IP, migliorando la sicurezza ed efficienza delle reti aziendali.</p>
       </div>
-    </aside>
+      <div class="experience-item">
+        <h3>Sistemista di Rete</h3>
+        <p class="date">Nuove Frontiere Lavoro (per agenzia interinale) - 22/07/2024 al 26/07/2024</p>
+        <p>Sviluppo rete aziendale con simulatore Cisco Packet Tracer per la Società Sportiva Dilettantistica Cavaliere Country Club S.r.L. (NA).</p>
+      </div>
+      <div class="experience-item">
+        <h3>Tecnico Hardware & Software</h3>
+        <p class="date">h.u.b. STitaly, Foggia e provincia</p>
+        <p>Gestione e consulenza tecnica dei dispositivi cellulari (Xiaomi, Alcatel, Lenovo).</p>
+      </div>
+      <div class="experience-item">
+        <h3>Tecnico Hardware & Software</h3>
+        <p class="date">NEW MAJESTIC SPA - Maggio 2019</p>
+        <p>Gestione e consulenza dei dispositivi cellulari per Majestic a Foggia e provincia.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Tecnico TLC</h3>
+        <p class="date">Progetto Elettronica 92 s.r.l. - 1995-2006 (Presente 11 anni)</p>
+        <p>Gestione dispositivi cellulari Siemens mobile.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Tecnico di Laboratorio</h3>
+        <p class="date">5°O.R.E Esercito Italiano - Maggio 1990 / Giugno 1991, Treviso</p>
+        <p>Gestione e riparazione dei dispositivi di radiocomunicazione per l’esercito Italiano (regione NordEst).</p>
+      </div>
+    </section>
 
-    <!-- Main Content: il campo descrizione (riassunto) parte in alto -->
-    <main class="main-content">
-      <section class="summary">
-        <p>
-          Con una passione per le telecomunicazioni e sempre desideroso di crescere, ho maturato esperienza in interventi software e hardware per dispositivi mobili.
-          La mia conoscenza dei protocolli TCP/IP e dell'architettura di rete mi consente di affrontare con competenza le sfide nel vasto campo dell'IT.
-        </p>
-      </section>
-
-      <section class="experience">
-        <h2>Esperienza</h2>
-        <div class="experience-item">
-          <h3>Sviluppatore Python</h3>
-          <p class="date">Nuove Frontiere Lavoro - 11/2024</p>
-          <p>Realizzato utility in Python per la scansione delle porte di indirizzi IP, migliorando la sicurezza ed efficienza delle reti aziendali.</p>
-        </div>
-        <div class="experience-item">
-          <h3>Sistemista di Rete</h3>
-          <p class="date">Nuove Frontiere Lavoro (per agenzia interinale) - 22/07/2024 al 26/07/2024</p>
-          <p>Sviluppo rete aziendale con simulatore Cisco Packet Tracer per la Società Sportiva Dilettantistica Cavaliere Country Club S.r.L. (NA).</p>
-        </div>
-        <div class="experience-item">
-          <h3>Tecnico Hardware & Software</h3>
-          <p class="date">h.u.b. STitaly, Foggia e provincia</p>
-          <p>Gestione e consulenza tecnica dei dispositivi cellulari (Xiaomi, Alcatel, Lenovo).</p>
-        </div>
-        <div class="experience-item">
-          <h3>Tecnico Hardware & Software</h3>
-          <p class="date">NEW MAJESTIC SPA - Maggio 2019</p>
-          <p>Gestione e consulenza dei dispositivi cellulari per Majestic a Foggia e provincia.</p>
-        </div>
-        <div class="experience-item">
-          <h3>Tecnico TLC</h3>
-          <p class="date">Progetto Elettronica 92 s.r.l. - 1995-2006 (Presente 11 anni)</p>
-          <p>Gestione dispositivi cellulari Siemens mobile.</p>
-        </div>
-        <div class="experience-item">
-          <h3>Tecnico di Laboratorio</h3>
-          <p class="date">5°O.R.E Esercito Italiano - Maggio 1990 / Giugno 1991, Treviso</p>
-          <p>Gestione e riparazione dei dispositivi di radiocomunicazione per l’esercito Italiano (regione NordEst).</p>
-        </div>
-      </section>
-      
-      <section class="education">
-        <h2>Formazione</h2>
-        <p>
-          <strong>I.T.I.S A. Minuziano San Severo (FG)</strong><br>
-          Perito Elettrotecnico Industriale, Elettrotecnica (1983 – 1988)
-        </p>
-      </section>
-    </main>
-  </div>
+    <!-- Formazione -->
+    <section class="education">
+      <h2>Formazione</h2>
+      <p>
+        <strong>I.T.I.S A. Minuziano San Severo (FG)</strong><br>
+        Perito Elettrotecnico Industriale, Elettrotecnica (1983 – 1988)
+      </p>
+    </section>
+  </main>
 </body>
 </html>
