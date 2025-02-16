@@ -10,7 +10,7 @@ body, html {
   height: 100%;
 }
 
-/* Header: posizionato in cima, sfondo nero */
+/* Header: occupa tutta la larghezza, sfondo nero */
 .page-header {
   background-color: #000;
   color: #fff;
@@ -33,32 +33,20 @@ body, html {
   font-size: 1em;
 }
 
-/* Campo descrizione: posto subito sotto l'header */
-.description {
-  background-color: #f9f9f9;
-  padding: 20px 40px;
-  text-align: center;
-  border-bottom: 2px solid #ddd;
-}
-
-.description p {
-  font-size: 1em;
-  margin-bottom: 0;
-}
-
-/* Wrapper per il layout a due colonne */
+/* Wrapper: contiene sidebar e main-content; parte subito sotto l'header */
 .wrapper {
   display: flex;
-  align-items: stretch; /* Le colonne si allineano in alto */
-  min-height: calc(100vh - 140px); /* Altezza viewport meno header e descrizione */
+  align-items: stretch;
+  min-height: calc(100vh - 80px); /* 80px = altezza header (modifica se necessario) */
 }
 
-/* Sidebar: inizia sotto header e descrizione, sfondo nero */
+/* Sidebar: inizia subito sotto l'header, sfondo nero, occupa tutta l'altezza residua */
 .sidebar {
   width: 300px;
   background-color: #000;
   color: #fff;
   padding: 20px;
+  height: calc(100vh - 80px); /* l'altezza della viewport meno l'header */
 }
 
 .sidebar-inner {
@@ -95,14 +83,23 @@ body, html {
   text-decoration: underline;
 }
 
-/* Contenuto principale: a destra, inizia in alto */
+/* Main Content: inizia in alto, allineato con il bordo superiore della sidebar */
 .main-content {
   flex: 1;
   background-color: #fff;
   padding: 20px 40px;
 }
 
-/* Sezioni Esperienza e Formazione */
+/* Campo Descrizione (Summary) */
+.summary {
+  margin-bottom: 20px;
+}
+.summary p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* Esperienza e Formazione */
 .experience h2,
 .education h2 {
   font-size: 1.8em;
@@ -140,6 +137,7 @@ body, html {
   }
   .sidebar {
     width: 100%;
+    height: auto;
     padding: 20px;
   }
   .main-content {
