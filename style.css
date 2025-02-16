@@ -6,56 +6,24 @@
 }
 
 body, html {
+  height: 100%;
   font-family: Arial, sans-serif;
 }
 
-/* Header a tutta larghezza */
-.page-header {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.page-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 5px;
-}
-
-.page-header h3 {
-  font-size: 1.5em;
-  margin-bottom: 5px;
-  font-weight: normal;
-}
-
-.page-header p {
-  font-size: 1em;
-}
-
-/* Riepilogo (full-width, subito sotto l'header) */
-.summary {
-  background-color: #f9f9f9;
-  padding: 20px 60px;
-  border-bottom: 2px solid #ddd;
-  text-align: center;
-}
-
-.summary h2 {
-  margin-bottom: 10px;
-}
-
-/* Layout a due colonne */
+/* Wrapper in modalità flex per due colonne */
 .wrapper {
   display: flex;
-  align-items: flex-start; /* Allinea in alto entrambe le colonne */
+  align-items: stretch; /* Fai sì che entrambe le colonne occupino tutta l'altezza */
+  min-height: 100vh; /* Altezza pari alla viewport */
 }
 
-/* Sidebar (fascia verticale a sinistra) */
+/* Sidebar (colonna sinistra, sfondo nero) */
 .sidebar {
   width: 300px;
   background-color: #000 !important;
   color: #fff;
   padding: 20px;
+  height: 100vh; /* Occupare l'intera altezza della pagina */
 }
 
 .sidebar-inner {
@@ -66,6 +34,7 @@ body, html {
 
 .sidebar section {
   background-color: #000 !important;
+  margin-bottom: 20px;
 }
 
 .sidebar h2 {
@@ -93,14 +62,35 @@ body, html {
   text-decoration: underline;
 }
 
-/* Contenuto principale a destra */
+/* Contenuto principale (colonna destra) */
 .main-content {
   flex: 1;
   background-color: #fff;
-  padding: 40px 60px;
+  padding: 20px 40px;
 }
 
-/* Sezioni del contenuto principale */
+/* Riepilogo (inizia in alto, a destra del sidebar) */
+.summary {
+  margin-bottom: 20px;
+}
+
+.summary h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+.summary h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.summary p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* Esperienza */
 .experience h2,
 .education h2 {
   font-size: 1.8em;
@@ -131,13 +121,14 @@ body, html {
   line-height: 1.6;
 }
 
-/* Responsive */
+/* Responsive: per schermi piccoli, layout a colonna */
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column;
   }
   .sidebar {
     width: 100%;
+    height: auto;
     padding: 20px;
   }
   .main-content {
