@@ -8,18 +8,23 @@
 body, html {
   font-family: Arial, sans-serif;
   height: 100%;
+  margin: 0;
 }
 
-/* Header: ora ha un'altezza fissa aumentata di circa 2 cm */
+/* Header fisso: occupa tutta la larghezza, sfondo nero, altezza aumentata di circa 2cm */
 .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 156px; /* Altezza aumentata (2cm ≈ 75px in più rispetto ad una base di ~80px) */
   background-color: #000;
   color: #fff;
-  height: 156px; /* Altezza aumentata rispetto al valore originale */
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  z-index: 1000;
 }
 
 .header-content h1 {
@@ -37,38 +42,20 @@ body, html {
   font-size: 1em;
 }
 
-/* Campo descrizione: posto subito sotto l'header */
-.description {
-  background-color: #f9f9f9;
-  padding: 20px 40px;
-  text-align: center;
-  border-bottom: 2px solid #ddd;
-}
-
-.description p {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
-/* Wrapper per il layout a due colonne (sidebar e main-content).
-   L'altezza minima è la viewport meno l'altezza fissa dell'header */
-.wrapper {
-  display: flex;
-  align-items: stretch;
-  min-height: calc(100vh - 156px);
-}
-
-/* Sidebar: inizia subito sotto l'header e la descrizione (se la descrizione fa parte del layout complessivo, vedi nota sotto)
-   e si estende per tutta l'altezza residua */
+/* Sidebar fisso: inizia subito sotto l'header e si estende fino al fondo della viewport */
 .sidebar {
+  position: fixed;
+  top: 156px;
+  left: 0;
   width: 300px;
+  height: calc(100vh - 156px);
   background-color: #000;
   color: #fff;
   padding: 20px;
-  height: calc(100vh - 156px);
+  overflow-y: auto;
 }
 
-.sidebar-inner {
+.sidebar .sidebar-inner {
   display: flex;
   flex-direction: column;
 }
@@ -102,14 +89,14 @@ body, html {
   text-decoration: underline;
 }
 
-/* Main Content: inizia in alto, allineato con il bordo superiore del sidebar */
+/* Main Content: inizia a destra del sidebar e sotto l'header */
 .main-content {
-  flex: 1;
-  background-color: #fff;
+  margin-top: 156px; /* Allinea il top del contenuto con il bordo inferiore dell'header */
+  margin-left: 300px; /* Spazio per il sidebar */
   padding: 20px 40px;
 }
 
-/* Campo Descrizione (summary) all'interno del main-content */
+/* Campo descrizione (Summary) */
 .summary {
   margin-bottom: 20px;
 }
@@ -123,4 +110,48 @@ body, html {
 .education h2 {
   font-size: 1.8em;
   margin-bottom: 15px;
-  border-bottom: 2px solid #
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.experience-item {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.experience-item h3 {
+  font-size: 1.4em;
+  color: #2b2b2b;
+  margin-bottom: 5px;
+}
+
+.experience-item .date {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.education p {
+  line-height: 1.6;
+}
+
+/* Responsive: layout a colonna per schermi piccoli */
+@media (max-width: 768px) {
+  .page-header {
+    position: relative;
+    height: auto;
+    padding: 20px;
+  }
+  .sidebar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .main-content {
+    margin: 0;
+    padding: 20px;
+  }
+}
