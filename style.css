@@ -6,34 +6,54 @@
 }
 
 body, html {
-  height: 100%;
   font-family: Arial, sans-serif;
+  height: 100%;
 }
 
-/* Wrapper in modalità flex per due colonne */
-.wrapper {
-  display: flex;
-  align-items: stretch; /* Fai sì che entrambe le colonne occupino tutta l'altezza */
-  min-height: 100vh; /* Altezza pari alla viewport */
-}
-
-/* Sidebar (colonna sinistra, sfondo nero) */
-.sidebar {
-  width: 300px;
-  background-color: #000 !important;
+/* Header principale (contenente Attilio Comes, Tecnico TLC, ecc.) */
+.page-header {
+  background-color: #000; /* sfondo nero */
   color: #fff;
   padding: 20px;
-  height: 100vh; /* Occupare l'intera altezza della pagina */
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+.header-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.header-content p {
+  font-size: 1em;
+}
+
+/* Wrapper per il layout a due colonne (sidebar + contenuto principale) */
+.wrapper {
+  display: flex;
+  align-items: stretch; /* Allinea in alto entrambe le colonne */
+  min-height: calc(100vh - 80px); /* Altezza viewport meno l'header */
+}
+
+/* Sidebar (colonna sinistra) */
+.sidebar {
+  width: 300px;
+  background-color: #000; /* sfondo nero */
+  color: #fff;
+  padding: 20px;
 }
 
 .sidebar-inner {
   display: flex;
   flex-direction: column;
-  background-color: #000 !important;
 }
 
 .sidebar section {
-  background-color: #000 !important;
   margin-bottom: 20px;
 }
 
@@ -69,28 +89,7 @@ body, html {
   padding: 20px 40px;
 }
 
-/* Riepilogo (inizia in alto, a destra del sidebar) */
-.summary {
-  margin-bottom: 20px;
-}
-
-.summary h1 {
-  font-size: 2.5em;
-  margin-bottom: 5px;
-}
-
-.summary h3 {
-  font-size: 1.5em;
-  margin-bottom: 5px;
-  font-weight: normal;
-}
-
-.summary p {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
-/* Esperienza */
+/* Esperienza e Formazione */
 .experience h2,
 .education h2 {
   font-size: 1.8em;
@@ -121,14 +120,13 @@ body, html {
   line-height: 1.6;
 }
 
-/* Responsive: per schermi piccoli, layout a colonna */
+/* Responsive: layout a colonna per schermi piccoli */
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: column;
   }
   .sidebar {
     width: 100%;
-    height: auto;
     padding: 20px;
   }
   .main-content {
