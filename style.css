@@ -13,7 +13,7 @@ body, html {
 .page-header {
   background-color: #000;
   color: #fff;
-  height: 550px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
