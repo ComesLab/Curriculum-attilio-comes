@@ -13,7 +13,7 @@ body, html {
 .page-header {
   background-color: #000;
   color: #fff;
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +47,7 @@ body, html {
   width: 300px;
   background-color: #000;
   color: #fff;
-  padding: 20px;
+  padding: 75px;
 }
 
 .sidebar-inner {
@@ -93,8 +93,7 @@ body, html {
 
 /* Campo Descrizione */
 .description {
-  margin-bottom: 20px;
-  text-align: center;
+  width: 80%
 }
 .description p {
   font-size: 1em;
