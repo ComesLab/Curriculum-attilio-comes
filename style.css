@@ -33,14 +33,27 @@ body, html {
   font-size: 1em;
 }
 
-/* Wrapper per il layout a due colonne: il sidebar e il contenuto principale */
-.wrapper {
-  display: flex;
-  align-items: stretch; /* Entrambe le colonne si estendono in altezza */
-  min-height: calc(100vh - 80px); /* Altezza viewport meno l'header */
+/* Campo descrizione: posto subito sotto l'header */
+.description {
+  background-color: #f9f9f9;
+  padding: 20px 40px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
 }
 
-/* Sidebar: posizionato subito sotto l'header, sfondo nero */
+.description p {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+/* Wrapper per il layout a due colonne */
+.wrapper {
+  display: flex;
+  align-items: stretch; /* Le colonne si allineano in alto */
+  min-height: calc(100vh - 140px); /* Altezza viewport meno header e descrizione */
+}
+
+/* Sidebar: inizia sotto header e descrizione, sfondo nero */
 .sidebar {
   width: 300px;
   background-color: #000;
@@ -82,7 +95,7 @@ body, html {
   text-decoration: underline;
 }
 
-/* Contenuto principale: inizia in alto, accanto al sidebar */
+/* Contenuto principale: a destra, inizia in alto */
 .main-content {
   flex: 1;
   background-color: #fff;
