@@ -1,22 +1,21 @@
-/* Impostazioni globali: nessun scroll e contenitore a 100vh */
-html, body {
-  height: 100%;
+/* Reset e impostazioni di base */
+* {
+  box-sizing: border-box;
   margin: 0;
-  overflow: hidden; /* evita lo scroll globale */
+  padding: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+body, html {
   font-family: Arial, sans-serif;
 }
 
-/* Header: in cima, sfondo nero, altezza fissa */
+/* Header: in cima, sfondo nero, altezza aumentata a 155px */
 .page-header {
   background-color: #000;
   color: #fff;
   height: 155px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -37,32 +36,62 @@ body {
   font-size: 1em;
 }
 
-/* Wrapper: occupa lo spazio rimanente (100vh - header - footer) */
+/* Wrapper: inizia subito sotto l'header (nessun margine superiore) */
 .wrapper {
   display: flex;
-  flex: 1;
-  height: calc(100vh - 240px); /* 155px (header) + 85px (footer) = 240px */
-  overflow: hidden; /* impedisce scroll interno */
+  align-items: flex-start;
 }
 
-/* Sidebar: a sinistra, con sfondo nero */
+/* Sidebar: inizia subito sotto l'header, toccando il bordo superiore della sezione wrapper */
 .sidebar {
   width: 300px;
   background-color: #000;
   color: #fff;
-  padding: 20px; /* puoi regolare il padding se serve */
-  /* Se il contenuto del sidebar non supera lo spazio, non serve overflow */
+  padding: 75px;
 }
 
-/* Main Content: occupa lo spazio rimanente a destra */
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar section {
+  margin-bottom: 20px;
+}
+
+.sidebar h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #555;
+  padding-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content: inizia in alto, accanto al sidebar */
 .main-content {
   flex: 1;
   background-color: #fff;
   padding: 20px 40px;
-  overflow: hidden; /* per forzare tutto dentro la viewport */
 }
 
-/* Sezione Descrizione (Summary) centrata */
+/* Campo Descrizione */
 .description {
   width: 80%;
   margin: 0 auto;
@@ -104,15 +133,26 @@ body {
   line-height: 1.6;
 }
 
-/* Footer: sfondo grigio, testo bianco, altezza fissa aumentata di circa 2cm */
+/* Footer: sfondo grigio, testo bianco, altezza aumentata di 2cm tramite padding */
 .footer {
   background-color: #808080;
   color: #fff;
   text-align: center;
-  height: 85px;  /* altezza fissa per il footer */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
   font-size: 0.9em;
+  margin-top: 20px;
+}
+
+/* Responsive: layout a colonna per schermi piccoli */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+  .main-content {
+    padding: 20px;
+  }
 }
