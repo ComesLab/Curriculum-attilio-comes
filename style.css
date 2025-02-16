@@ -9,11 +9,11 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-/* Header: ora ha un'altezza fissa aumentata di circa 2cm */
+/* Header: in cima, sfondo nero, altezza aumentata a 155px */
 .page-header {
-  background-color: #000;       /* Sfondo nero */
+  background-color: #000;
   color: #fff;
-  height: 155px;                /* Altezza aumentata (ad esempio 155px) */
+  height: 155px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,26 +36,13 @@ body, html {
   font-size: 1em;
 }
 
-/* Campo descrizione: posto subito sotto l'header */
-.description {
-  background-color: #f9f9f9;
-  padding: 20px 40px;
-  text-align: center;
-  border-bottom: 2px solid #ddd;
-}
-
-.description p {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
-/* Layout a due colonne: sidebar e contenuto principale */
+/* Wrapper: inizia subito sotto l'header (nessun margine superiore) */
 .wrapper {
   display: flex;
   align-items: flex-start;
 }
 
-/* Sidebar: parte sinistra con sfondo nero */
+/* Sidebar: inizia subito sotto l'header, toccando il bordo superiore della sezione wrapper */
 .sidebar {
   width: 300px;
   background-color: #000;
@@ -63,7 +50,7 @@ body, html {
   padding: 20px;
 }
 
-.sidebar .sidebar-inner {
+.sidebar-inner {
   display: flex;
   flex-direction: column;
 }
@@ -97,11 +84,21 @@ body, html {
   text-decoration: underline;
 }
 
-/* Contenuto principale: a destra */
+/* Main Content: inizia in alto, accanto al sidebar */
 .main-content {
   flex: 1;
   background-color: #fff;
   padding: 20px 40px;
+}
+
+/* Campo Descrizione */
+.description {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.description p {
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 
 /* Esperienza e Formazione */
