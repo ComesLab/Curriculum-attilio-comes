@@ -13,7 +13,7 @@ body, html {
 .page-header {
   background-color: #000;
   color: #fff;
-  height: 200px;
+  height: 155px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +47,7 @@ body, html {
   width: 300px;
   background-color: #000;
   color: #fff;
-  padding: 89px;
+  padding: 75px;
 }
 
 .sidebar-inner {
@@ -93,7 +93,9 @@ body, html {
 
 /* Campo Descrizione */
 .description {
-  width: 80%
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 .description p {
   font-size: 1em;
@@ -129,6 +131,16 @@ body, html {
 
 .education p {
   line-height: 1.6;
+}
+
+/* Footer: sfondo grigio, testo bianco, altezza aumentata di 2cm tramite padding */
+.footer {
+  background-color: #808080;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  margin-top: 20px;
 }
 
 /* Responsive: layout a colonna per schermi piccoli */
