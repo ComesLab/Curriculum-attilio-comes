@@ -7,7 +7,7 @@
 
 body, html {
   height: 100%;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 /* Header a tutta larghezza */
@@ -33,10 +33,22 @@ body, html {
   font-size: 1em;
 }
 
-/* Wrapper per il layout a due colonne */
+/* Sezione riepilogo */
+.summary {
+  background-color: #f9f9f9;
+  padding: 20px 60px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+.summary h2 {
+  margin-bottom: 10px;
+}
+
+/* Layout a due colonne: Sidebar e Contenuto principale */
 .wrapper {
   display: flex;
-  min-height: calc(100vh - 80px); /* Altezza totale meno l'header */
+  min-height: calc(100vh - 180px); /* Altezza totale meno header e riepilogo */
 }
 
 /* Sidebar (fascia verticale a sinistra) */
@@ -86,7 +98,6 @@ body, html {
   overflow-y: auto;
 }
 
-/* Sezioni del contenuto principale */
 .main-content h2 {
   font-size: 1.8em;
   margin-bottom: 15px;
@@ -94,6 +105,7 @@ body, html {
   padding-bottom: 5px;
 }
 
+/* Esperienza */
 .experience-item {
   margin-bottom: 25px;
   padding-bottom: 15px;
@@ -110,6 +122,11 @@ body, html {
   font-size: 0.9em;
   color: #555;
   margin-bottom: 10px;
+}
+
+/* Educazione */
+.education p {
+  line-height: 1.6;
 }
 
 /* Responsive */
