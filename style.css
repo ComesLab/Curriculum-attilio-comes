@@ -7,24 +7,18 @@
 
 body, html {
   font-family: Arial, sans-serif;
-  height: 100%;
-  margin: 0;
 }
 
-/* Header fisso: occupa tutta la larghezza, sfondo nero, altezza aumentata di circa 2cm */
+/* Header: ora ha un'altezza fissa aumentata di circa 2cm */
 .page-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 156px; /* Altezza aumentata (2cm ≈ 75px in più rispetto ad una base di ~80px) */
-  background-color: #000;
+  background-color: #000;       /* Sfondo nero */
   color: #fff;
-  text-align: center;
+  height: 155px;                /* Altezza aumentata (ad esempio 155px) */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 1000;
+  align-items: center;
+  text-align: center;
 }
 
 .header-content h1 {
@@ -42,17 +36,31 @@ body, html {
   font-size: 1em;
 }
 
-/* Sidebar fisso: inizia subito sotto l'header e si estende fino al fondo della viewport */
+/* Campo descrizione: posto subito sotto l'header */
+.description {
+  background-color: #f9f9f9;
+  padding: 20px 40px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+.description p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* Layout a due colonne: sidebar e contenuto principale */
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Sidebar: parte sinistra con sfondo nero */
 .sidebar {
-  position: fixed;
-  top: 156px;
-  left: 0;
   width: 300px;
-  height: calc(100vh - 156px);
   background-color: #000;
   color: #fff;
   padding: 20px;
-  overflow-y: auto;
 }
 
 .sidebar .sidebar-inner {
@@ -89,20 +97,11 @@ body, html {
   text-decoration: underline;
 }
 
-/* Main Content: inizia a destra del sidebar e sotto l'header */
+/* Contenuto principale: a destra */
 .main-content {
-  margin-top: 156px; /* Allinea il top del contenuto con il bordo inferiore dell'header */
-  margin-left: 300px; /* Spazio per il sidebar */
+  flex: 1;
+  background-color: #fff;
   padding: 20px 40px;
-}
-
-/* Campo descrizione (Summary) */
-.summary {
-  margin-bottom: 20px;
-}
-.summary p {
-  font-size: 1em;
-  margin-bottom: 10px;
 }
 
 /* Esperienza e Formazione */
@@ -138,20 +137,14 @@ body, html {
 
 /* Responsive: layout a colonna per schermi piccoli */
 @media (max-width: 768px) {
-  .page-header {
-    position: relative;
-    height: auto;
-    padding: 20px;
+  .wrapper {
+    flex-direction: column;
   }
   .sidebar {
-    position: relative;
-    top: 0;
     width: 100%;
-    height: auto;
     padding: 20px;
   }
   .main-content {
-    margin: 0;
     padding: 20px;
   }
 }
