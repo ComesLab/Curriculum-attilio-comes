@@ -53,15 +53,19 @@ body, html {
 /* Sidebar (fascia verticale a sinistra) */
 .sidebar {
   width: 300px;
-  background-color: #000;
+  background-color: #000 !important;
   color: #fff;
   padding: 20px;
 }
 
-.sidebar,
-.sidebar-inner,
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  background-color: #000 !important;
+}
+
 .sidebar section {
-  background-color: #000;
+  background-color: #000 !important;
 }
 
 .sidebar h2 {
@@ -89,14 +93,14 @@ body, html {
   text-decoration: underline;
 }
 
-/* Contenuto principale a destra: senza margine verticale per iniziare esattamente in alto */
+/* Contenuto principale a destra */
 .main-content {
   flex: 1;
   background-color: #fff;
   padding: 40px 60px;
 }
 
-/* Esperienza */
+/* Sezioni del contenuto principale */
 .experience h2,
 .education h2 {
   font-size: 1.8em;
