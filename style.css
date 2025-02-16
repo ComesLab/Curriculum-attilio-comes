@@ -33,10 +33,9 @@ body, html {
   font-size: 1em;
 }
 
-/* Layout a due colonne: Sidebar e Contenuto principale */
+/* Layout a due colonne */
 .wrapper {
   display: flex;
-  min-height: calc(100vh - 80px); /* Altezza totale meno l'header */
 }
 
 /* Sidebar (fascia verticale a sinistra) */
@@ -45,6 +44,8 @@ body, html {
   background-color: #2b2b2b;
   color: #fff;
   padding: 20px;
+  /* Altezza fissa per far terminare la sidebar a 500px */
+  height: 500px;
 }
 
 .sidebar-inner {
@@ -79,14 +80,14 @@ body, html {
 }
 
 /* Contenuto principale a destra */
+/* Il margin-top spinge il riepilogo e le esperienze in basso, in linea con la fine della sidebar */
 .main-content {
   flex: 1;
   background-color: #fff;
   padding: 40px 60px;
-  overflow-y: auto;
+  margin-top: 500px;
 }
 
-/* Riepilogo (ora parte della colonna principale) */
 .summary {
   margin-bottom: 40px;
   border-bottom: 2px solid #ddd;
@@ -138,8 +139,10 @@ body, html {
   .sidebar {
     width: 100%;
     padding: 20px;
+    height: auto; /* lascia che l'altezza si adatti */
   }
   .main-content {
+    margin-top: 20px;
     padding: 20px;
   }
 }
