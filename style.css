@@ -136,7 +136,7 @@ body, html {
 /* Footer: sfondo grigio, testo bianco, altezza aumentata di 2cm tramite padding,
    e unito visivamente con il sidebar (nessun margine-top) */
 .footer {
-  background-color: #808080;
+  background-color: #000;
   color: #fff;
   text-align: center;
   padding: 20px;
