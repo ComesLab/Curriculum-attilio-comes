@@ -45,7 +45,7 @@ body, html {
   color: #fff;
   padding: 20px;
   /* Altezza fissa per far terminare la sidebar a 500px */
-  height: 1000px;
+  height: 10px;
 }
 
 .sidebar-inner {
@@ -85,7 +85,7 @@ body, html {
   flex: 1;
   background-color: #fff;
   padding: 40px 60px;
-  margin-top: 1000px;
+  margin-top: 10px;
 }
 
 .summary {
